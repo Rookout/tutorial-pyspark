@@ -16,10 +16,10 @@ Before following this guide we recommend reading the basic [Python + Rookout](ht
 
 2. *Export organization token and label*:
  ```
- export ROOKOUT_TOKEN=<Your Rookout Token>
+export ROOKOUT_TOKEN=<Your Rookout Token>
 ```
 ```
- export ROOKOUT_LABELS=app:pyspark
+export ROOKOUT_LABELS=app:pyspark
 ```
 
 3. *Try placing breakpoints at these locations in `example.py`*:
