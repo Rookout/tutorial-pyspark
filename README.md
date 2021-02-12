@@ -39,9 +39,9 @@ spark-submit --conf spark.python.daemon.module=rook.pyspark_daemon example.py
     You cannot place breakpoints in executor nodes in the `__main__` module, as a side effect of how PySpark serializes functions.
 
     Try placing breakpoints at:
-    * In `example.main` on line 36
-    * In `example_executor_module.handle_record` on line 30
-    * In `example_executor_module.multiply_latlong` (a UDF) on line 7
+    * In `example.py` in the main() method
+    * In `example_executor_module.handle_record` on line 35
+    * In `example_executor_module.multiply_latlong` (a UDF) on line 10
     * Run your program
 
 ## Running under YARN (AWS EMR)
