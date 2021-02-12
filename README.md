@@ -14,9 +14,12 @@ Before following this guide we recommend reading the basic [Python + Rookout](ht
     pip install -r requirements.txt  # also on executor nodes, if running in a cluster
 ```
 
-2. *Export organization token*:
+2. *Export organization token and label*:
  ```
  export ROOKOUT_TOKEN=<Your Rookout Token>
+```
+```
+ export ROOKOUT_LABELS=app:pyspark
 ```
 
 3. *Try placing breakpoints at these locations in `example.py`*:
