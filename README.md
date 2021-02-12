@@ -10,7 +10,7 @@ Before following this guide we recommend reading the basic [Python + Rookout](ht
 1. *Clone and install dependencies*:
  ```bash
     git clone https://github.com/Rookout/deployment-examples.git
-    cd deployment-examples/python-spark
+    cd pyspark
     pip install -r requirements.txt  # also on executor nodes, if running in a cluster
 ```
 
