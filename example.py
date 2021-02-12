@@ -38,8 +38,8 @@ def main():
         .getOrCreate()
     with open("sample-data.csv", "wb") as sample_data_file:
         sample_data_file.write("lat,long\n")
-        for i in xrange(10):
-            sample_data_file.write("%d,40.714224,-73.961452\n" % (i % 10))
+        for i in xrange(100):
+            sample_data_file.write("%d,40.714224,-73.961452\n" % (i % 100))
     points = spark_session.read.csv("sample-data.csv", header=True, schema=schema).repartition(3)
     points_rdd = points.rdd.mapPartitions(map_partitions_handler)
     points = spark_session.createDataFrame(data=points_rdd, schema=points.schema, verifySchema=False)
