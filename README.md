@@ -9,7 +9,7 @@ Before following this guide we recommend reading the basic [Python + Rookout](ht
 
 1. *Clone and install dependencies*:
  ```bash
-    git clone https://github.com/joshRookout/pyspark
+    git clone https://github.com/Rookout/tutorial-pyspark
     cd pyspark
     pip install -r requirements.txt  # also on executor nodes, if running in a cluster
 ```
