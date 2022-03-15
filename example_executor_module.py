@@ -4,7 +4,7 @@ from pyspark.sql.functions import col, udf
 
 
 def multiply_latlong(lat, long_):
-    print "multiply_latlong executed"
+    print("multiply_latlong executed")
     res = int(lat) * int(long_)
     time.sleep(1)
     return res
@@ -27,7 +27,7 @@ class AddressInfoGetter(object):
 
 
 def handle_record(record):
-    print "handle_record executed"
+    print("handle_record executed")
     record = record.asDict()
     time.sleep(1)
     getter = AddressInfoGetter()
