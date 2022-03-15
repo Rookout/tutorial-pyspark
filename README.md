@@ -68,3 +68,15 @@ In addition, you cannot place breakpoints in functions defined in the `__main__`
 This is a side effect of how PySpark serializes functions before sending them to executors. 
 
 [Python + Rookout]: https://docs.rookout.com/docs/sdk-setup.html
+
+## Debugging Spark Engine Code
+Rookout can be used to debug the Spark Engine code itself, such as a Spark Driver for example. Rookout can optionally be configured to debug Spark Java classes. To do that, set the `spark.driver.extraJavaOptions` config option allowing us to pass additional JVM options upon startup. We'll use this to pass the Rookout Java agent:
+```
+spark-submit --conf spark.python.daemon.module=rook.pyspark_daemon --conf spark.driver.extraJavaOptions=-javaagent:rook.jar example.py
+```
+You can find additional details about the property here: https://spark.apache.org/docs/latest/configuration.html#dynamically-loading-spark-properties
+
+You will also need to download the Rookout agent Jar file:
+```
+curl -L "https://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&g=com.rookout&a=rook&v=LATEST" -o rook.jar
+```
