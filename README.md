@@ -79,3 +79,4 @@ You will also need to download the Rookout agent Jar file:
 ```
 curl -L "https://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&g=com.rookout&a=rook&v=LATEST" -o rook.jar
 ```
+Apache Spark code can be found here: https://github.com/apache/spark
